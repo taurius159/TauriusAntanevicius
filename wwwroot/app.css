@@ -2,7 +2,7 @@ html,
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #181818;
-  color: #3a3a3a;
+  color: #cfcfcf;
 }
 
 .navbar {
@@ -14,9 +14,10 @@ body {
   border-radius: 5px;
 }
 
-/* Active link text color */
 .nav-link.active {
   color: white;
+  background-color: #3a3a3a;
+  border: 1px solid #cfcfcf;
 }
 
 .nav-link:hover {
@@ -27,4 +28,20 @@ body {
 
 .nav-link svg {
   fill: currentColor;
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.navbar-brand.active,
+.navbar-brand:hover {
+  background-color: #181818;
+  border: 0;
+}
+
+@media (max-width: 770px) {
+  .brand-text {
+    display: none;
+  }
 }
