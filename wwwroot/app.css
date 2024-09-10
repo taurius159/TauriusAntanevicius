@@ -9,6 +9,7 @@ body {
   font-size: 16px;
   background-color: #181818;
   color: #cfcfcf;
+  font-weight: 500;
 }
 
 .container {
@@ -24,6 +25,7 @@ nav {
   padding-top: 30px;
   border-bottom: 1px solid #333;
   margin-bottom: 30px;
+  font-weight: 700;
 }
 
 nav a {
@@ -47,23 +49,46 @@ nav a:first-child {
 }
 
 /* Home Section */
-.home-image {
-  width: 400px;
+.hero img {
+  width: 250px;
   height: auto;
+  float: right;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 1.5rem 0 20px;
+  line-height: 1.6;
+  float: left;
+  width: 60%;
 }
 
 /* Small Screen Support */
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .container {
     width: 100%;
     padding: 0 20px;
   }
 
   nav a {
-    padding-left: 40px;
+    padding-left: 20px;
   }
 
   nav a:first-child {
     padding-left: 0;
+  }
+
+  .hero p {
+    width: 100%;
+  }
+
+  .hero img {
+    display: none;
   }
 }
