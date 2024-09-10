@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Averia Serif Libre";
   font-size: 16px;
   background-color: #181818;
   color: #cfcfcf;
@@ -43,6 +43,7 @@ nav a {
   float: right;
   color: #bbbbbb;
   text-decoration: none;
+  font-size: 1.1rem;
 }
 
 nav a:hover {
@@ -73,7 +74,7 @@ nav a:first-child {
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin: 1.5rem 0 20px;
   line-height: 1.6;
   float: left;
@@ -89,6 +90,7 @@ nav a:first-child {
 
   nav a {
     padding-left: 20px;
+    font-size: 1rem;
   }
 
   nav a:first-child {
@@ -97,6 +99,7 @@ nav a:first-child {
 
   .hero p {
     width: 100%;
+    font-size: 1.4rem;
   }
 
   .hero h1 {
