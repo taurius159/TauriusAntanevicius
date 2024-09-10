@@ -6,7 +6,7 @@
 
 body {
   font-family: sans-serif;
-  font-size: 24px;
+  font-size: 16px;
   background-color: #181818;
   color: #cfcfcf;
 }
@@ -27,7 +27,7 @@ nav {
 }
 
 nav a {
-  padding-left: 20px;
+  padding-left: 50px;
   float: right;
   color: #bbbbbb;
   text-decoration: none;
@@ -50,4 +50,20 @@ nav a:first-child {
 .home-image {
   width: 400px;
   height: auto;
+}
+
+/* Small Screen Support */
+@media (max-width: 700px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  nav a {
+    padding-left: 40px;
+  }
+
+  nav a:first-child {
+    padding-left: 0;
+  }
 }
