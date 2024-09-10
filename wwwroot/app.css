@@ -88,6 +88,10 @@ nav a:first-child {
     width: 100%;
   }
 
+  .hero h1 {
+    font-size: 2.4rem;
+  }
+
   .hero img {
     display: none;
   }
