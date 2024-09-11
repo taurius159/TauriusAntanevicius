@@ -46,6 +46,11 @@ nav a {
   font-size: 1.1rem;
 }
 
+nav a:first-child {
+  padding-left: 0;
+  float: left;
+}
+
 nav a:hover {
   color: #fff;
   text-decoration: none;
@@ -55,30 +60,69 @@ nav a.active {
   color: #fff;
 }
 
-nav a:first-child {
-  padding-left: 0;
-  float: left;
-}
-
-/* Home Section */
-.hero img {
+/* Special Hero Section - Home */
+.hero-home img {
   width: 250px;
   height: auto;
   float: right;
 }
 
-.hero h1 {
+.hero-home h1 {
   font-size: 3rem;
   font-weight: 700;
   display: inline-block;
+}
+
+.hero-home p {
+  font-size: 1.3rem;
+  margin: 1.5rem 0 20px;
+  line-height: 1.6;
+  float: left;
+  width: 60%;
+}
+
+/* General Hero Section */
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .hero p {
   font-size: 1.3rem;
   margin: 1.5rem 0 20px;
   line-height: 1.6;
-  float: left;
-  width: 60%;
+}
+
+/* Project-Cards Grid*/
+.projects-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 20px;
+}
+
+.project-grid-item {
+  background-color: #333;
+  border-radius: 10px;
+  border: 1px solid #bbbbbb;
+  padding: 20px;
+  height: fit-content;
+}
+
+.project-grid-item time {
+  color: #fcd37a;
+  font-size: 1.1rem;
+  display: block;
+}
+
+.project-header {
+  color: #fff;
+  text-decoration: none;
+}
+
+.project-header:hover {
+  color: #fff;
+  text-decoration: underline;
 }
 
 /* Small Screen Support */
@@ -97,16 +141,19 @@ nav a:first-child {
     padding-left: 0;
   }
 
-  .hero p {
+  .hero-home p {
     width: 100%;
     font-size: 1.4rem;
   }
 
-  .hero h1 {
+  .hero-home h1 {
     font-size: 2.4rem;
   }
 
-  .hero img {
-    display: none;
+  .hero-home img {
+    float: left;
+  }
+  .projects-grid {
+    grid-template-columns: auto;
   }
 }
