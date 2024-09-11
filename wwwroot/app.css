@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-  width: 700px;
+  width: 750px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -72,11 +72,13 @@ nav a.active {
   font-weight: 700;
   display: inline-block;
   color: #fff;
+  margin-top: 2.3rem;
+  margin-bottom: 2rem;
 }
 
 .hero-home p {
   font-size: 1.3rem;
-  margin: 1.5rem 0 20px;
+  margin: 1.5rem 0 1.2rem;
   line-height: 1.6;
   float: left;
   width: 60%;
@@ -86,8 +88,9 @@ nav a.active {
 .hero h1 {
   font-size: 3rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   color: #fff;
+  margin-top: 4rem;
 }
 
 .hero p {
@@ -157,7 +160,8 @@ nav a.active {
   color: #fff;
   padding-top: 1.5rem;
   padding-bottom: 2rem;
-  font-size: 2rem;
+  font-size: 2.3rem;
+  margin-top: 3.5rem;
 }
 
 .post-content h3 {
@@ -168,6 +172,33 @@ nav a.active {
 .post-content p {
   margin-bottom: 1.6rem;
   line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* SMALL SEGMENT - ABOUT */
+.segment-small {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.segment-small p,
+li {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.segment-small h3 {
+  color: #fff;
+  font-weight: 300;
+  margin-top: 3.5rem;
+}
+
+.segment-small h2 {
+  color: #fff;
+  font-weight: 500;
+  border-bottom: 1px solid #333;
+  font-size: 2rem;
+  margin-top: 3.5rem;
 }
 
 /* Small Screen Support */
