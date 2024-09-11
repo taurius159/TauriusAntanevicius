@@ -152,6 +152,24 @@ nav a.active {
   color: #bbbbbb;
 }
 
+.post-header h1 {
+  font-weight: 600;
+  color: #fff;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.post-content h3 {
+  margin-top: 3.5rem;
+  color: #fff;
+}
+
+.post-content p {
+  margin-bottom: 1.6rem;
+  line-height: 1.8;
+}
+
 /* Small Screen Support */
 @media (max-width: 767px) {
   .container {
