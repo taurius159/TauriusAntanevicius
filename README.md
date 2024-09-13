@@ -1,5 +1,5 @@
 # Personal Website
 
-## hosted as taurius.dev
+## Visit: taurius.dev
 
 - Hosted on Digital Ocean
