@@ -60,6 +60,10 @@ nav a.active {
   color: #fff;
 }
 
+#text-header p {
+  display: inline-block;
+}
+
 /* Special Hero Section - Home */
 .hero-home img {
   width: 250px;
@@ -231,5 +235,22 @@ li {
   }
   .projects-grid {
     grid-template-columns: auto;
+  }
+}
+
+@media (max-width: 457px) {
+  #text-header span p {
+    display: none;
+  }
+
+  #text-header span:after {
+    visibility: visible;
+    content: "Taurius";
+  }
+}
+
+@media (max-width: 354px) {
+  #text-header span {
+    display: none;
   }
 }
