@@ -1,10 +1,20 @@
 using tauriusantanevicius.Components;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Information()
+            .WriteTo.Console()          // Write logs to console
+            .CreateLogger();
+
+builder.Host.UseSerilog();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Logging.SetMinimumLevel(LogLevel.Information);
 
 var app = builder.Build();
 
