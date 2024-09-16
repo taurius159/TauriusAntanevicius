@@ -1,5 +1,5 @@
 export function sayHello() {
-  prompt(message, "Type your name here");
+  alert("Hello from JS!");
 }
 
 window.threeInterop = {

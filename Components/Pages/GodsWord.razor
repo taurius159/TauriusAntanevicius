@@ -1,6 +1,5 @@
 @page "/godsword"
 @inject IJSRuntime JS;
-@inject ILogger<GodsWord> Logger
 @rendermode InteractiveServer
 
 <PageTitle>God's Word | Taurius Antanevicius' Personal Website</PageTitle>
@@ -23,16 +22,30 @@
 
 @code {
     private string? imageSource;
+    private IJSObjectReference? module;
 
-    private void ShowImage()
+    private async void ShowImage()
     {
         if (imageSource is null)
         {
             imageSource = $"images/laptop.png";
+            if (module is not null)
+            {
+                await module.InvokeVoidAsync("sayHello");
+            }
         }
         else
         {
             imageSource = null;
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            module = await JS.InvokeAsync<IJSObjectReference>(
+                "import", "./Components/Pages/GodsWord.razor.js");
         }
     }
 }
