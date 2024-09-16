@@ -5,47 +5,26 @@
 <PageTitle>God's Word | Taurius Antanevicius' Personal Website</PageTitle>
 
 <div class="hero">
-    <h1>God's Word</h1>
-    <p style="font-size: 1rem;">3min game where you play as as an individual who affects and gets affected
-        by the world around you, with Biblical God interventions from Genesis to the End Times.
+    <h1>God's Word Game</h1>
+    <p style="font-size: 1rem;">3 minute game where you play as an individual who gets to save souls by affecting and getting affected
+        by the world around you. From Genesis to the End Times.
     </p>
 </div>
 
-<button @onclick="ShowImage">Show Image</button>
-
-@if (imageSource is not null)
-{
-    <p>
-        <img style="width: 550px;" src="@imageSource" />
-    </p>
-}
+<canvas id="threeCanvas" width="800" height="600" style="border:1px solid black;"></canvas>
 
 @code {
     private string? imageSource;
     private IJSObjectReference? module;
-
-    private async void ShowImage()
-    {
-        if (imageSource is null)
-        {
-            imageSource = $"images/laptop.png";
-            if (module is not null)
-            {
-                await module.InvokeVoidAsync("sayHello");
-            }
-        }
-        else
-        {
-            imageSource = null;
-        }
-    }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
             module = await JS.InvokeAsync<IJSObjectReference>(
-                "import", "./Components/Pages/GodsWord.razor.js");
+                "import", "./Components/Pages/GodsWord.razor.js");            
         }
+
+        await module.InvokeVoidAsync("initializeThreeJS", "threeCanvas");
     }
 }

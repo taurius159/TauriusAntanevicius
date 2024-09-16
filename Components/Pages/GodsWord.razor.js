@@ -1,47 +1,50 @@
+let scene, camera, renderer, cube;
+
 export function sayHello() {
   alert("Hello from JS!");
 }
 
-window.threeInterop = {
-  initializeScene: function (canvasId) {
-    // Get the canvas element by ID
-    const canvas = document.getElementById(canvasId);
+export function sayHelloTo(name) {
+  alert(`Hello, ${name}!`);
+}
 
-    // Create a new Three.js scene
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(
-      75,
-      canvas.clientWidth / canvas.clientHeight,
-      0.1,
-      1000
-    );
+export function initializeThreeJS(canvasId) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas) {
+    console.error("Canvas element not found");
+    return;
+  }
 
-    // Create the WebGL renderer and attach it to the canvas
-    const renderer = new THREE.WebGLRenderer({ canvas: canvas });
-    renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(
+    75,
+    canvas.clientWidth / canvas.clientHeight,
+    0.1,
+    1000
+  );
+  renderer = new THREE.WebGLRenderer({ canvas: canvas });
+  renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+  camera.position.z = 5;
 
-    // Create a cube and add it to the scene
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
+  const geometry = new THREE.BoxGeometry();
+  const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+  cube = new THREE.Mesh(geometry, material);
+  scene.add(cube);
 
-    // Set the camera position
-    camera.position.z = 5;
-
-    // Animation loop
-    function animate() {
-      requestAnimationFrame(animate);
-
-      // Rotate the cube
+  function animate() {
+    requestAnimationFrame(animate);
+    if (cube) {
       cube.rotation.x += 0.01;
       cube.rotation.y += 0.01;
-
-      // Render the scene with the camera
-      renderer.render(scene, camera);
     }
+    renderer.render(scene, camera);
+  }
 
-    // Start the animation loop
-    animate();
-  },
-};
+  animate();
+}
+
+export function setCubeColor(color) {
+  if (cube) {
+    cube.material.color.set(color);
+  }
+}
