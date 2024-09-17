@@ -9,11 +9,23 @@ function initializeGodsWord(canvasId) {
     }
 
     sceneManager = new SceneManager(canvas);
-    animate();
+    sceneManager.initializeParticles().then(() => {
+      animate();
+    });
+
+    startAnimation();
 
     function animate() {
       requestAnimationFrame(animate);
-      sceneManager.render();
+      if (sceneManager) {
+        sceneManager.render();
+      }
     }
   });
+}
+
+function startAnimation() {
+  if (sceneManager) {
+    sceneManager.startAnimation();
+  }
 }
