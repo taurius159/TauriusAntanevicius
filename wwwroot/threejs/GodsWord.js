@@ -1,14 +1,7 @@
+// import { SceneManager } from "./SceneManager";
 let scene, camera, renderer, cube;
 
-export function sayHello() {
-  alert("Hello from JS!");
-}
-
-export function sayHelloTo(name) {
-  alert(`Hello, ${name}!`);
-}
-
-export function initializeThreeJS(canvasId) {
+function initializeThreeJS(canvasId) {
   const canvas = document.getElementById(canvasId);
   if (!canvas) {
     console.error("Canvas element not found");
@@ -43,7 +36,7 @@ export function initializeThreeJS(canvasId) {
   animate();
 }
 
-export function setCubeColor(color) {
+function setCubeColor(color) {
   if (cube) {
     cube.material.color.set(color);
   }
