@@ -1,6 +1,6 @@
 let scene, camera, renderer, cube;
 
-function initializeThreeJS(canvasId) {
+function initializeGodsWord(canvasId) {
   import("./SceneManager.js").then(({ SceneManager }) => {
     const canvas = document.getElementById(canvasId);
     if (!canvas) {

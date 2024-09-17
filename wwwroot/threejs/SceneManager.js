@@ -30,11 +30,25 @@ export class SceneManager {
     this.renderer.setSize(canvas.clientWidth, canvas.clientHeight);
     this.renderer.setPixelRatio(window.devicePixelRatio);
 
+    // Set up lighting
+    this.setupLighting();
+
     // Set up the 2D plane (optional grid)
     this.setup2DPlane();
 
     // Add window resize listener
     window.addEventListener("resize", () => this.onWindowResize());
+  }
+
+  setupLighting() {
+    // Ambient light for basic illumination
+    const ambientLight = new THREE.AmbientLight(0x404040); // Soft white light
+    this.scene.add(ambientLight);
+
+    // Optional: Add a directional light to simulate a light source from above
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    directionalLight.position.set(0, 0, 10).normalize();
+    this.scene.add(directionalLight);
   }
 
   setup2DPlane() {

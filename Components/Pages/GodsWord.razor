@@ -5,13 +5,17 @@
 <PageTitle>God's Word | Taurius Antanevicius' Personal Website</PageTitle>
 
 <div class="hero">
-    <h1>God's Word Game</h1>
-    <p style="font-size: 1rem;">3 minute game where you play as an individual who gets to save souls by affecting and getting affected
+    @* <h1>God's Word Game</h1> *@
+    @* <p style="font-size: 1rem;">3 minute game where you play as an individual who gets to save souls by affecting and getting affected
         by the world around you. From Genesis to the End Times.
-    </p>
+    </p> *@
+    <p>In Development...</p>
 </div>
 
+<p class="unsupported-screen-message">Sorry, this game is only supported on desktop screens. 
+    Please try again on a larger screen.</p>
 <canvas id="threeCanvas" width="800" height="600" style="border:1px solid black;"></canvas>
+
 
 @code {
     private string? imageSource;
@@ -23,6 +27,6 @@
          
         }
 
-        await JS.InvokeVoidAsync("initializeThreeJS", "threeCanvas");
+        await JS.InvokeVoidAsync("initializeGodsWord", "threeCanvas");
     }
 }
