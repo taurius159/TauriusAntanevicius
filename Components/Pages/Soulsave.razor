@@ -1,8 +1,8 @@
-@page "/godsword"
+@page "/soulsave"
 @inject IJSRuntime JS;
 @rendermode InteractiveServer
 
-<PageTitle>God's Word | Taurius Antanevicius' Personal Website</PageTitle>
+<PageTitle>Soul Save | Taurius Antanevicius' Personal Website</PageTitle>
 
 <div class="hero">
     @* <h1>God's Word Game</h1> *@
@@ -27,6 +27,6 @@
          
         }
 
-        await JS.InvokeVoidAsync("initializeGodsWord", "threeCanvas");
+        await JS.InvokeVoidAsync("initializeGame", "threeCanvas");
     }
 }
