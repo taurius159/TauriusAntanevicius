@@ -39,6 +39,9 @@ nav {
   border-bottom: 1px solid #333;
   margin-bottom: 30px;
   font-weight: 700;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
 }
 
 nav a {
@@ -67,6 +70,40 @@ nav a.active {
   display: inline-block;
 }
 
+/* Animations */
+/* Playground */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
 /* Special Hero Section - Home */
 
 .hero-home {
@@ -77,6 +114,9 @@ nav a.active {
   width: 250px;
   height: auto;
   float: right;
+
+  animation-name: moveInRight;
+  animation-duration: 1s;
 }
 
 .hero-home h1 {
@@ -86,6 +126,9 @@ nav a.active {
   color: #fff;
   margin-top: 2.3rem;
   margin-bottom: 2rem;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
 }
 
 .hero-home p {
@@ -94,6 +137,9 @@ nav a.active {
   line-height: 1.6;
   float: left;
   width: 60%;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
 }
 
 /* General Hero Section */
@@ -103,12 +149,18 @@ nav a.active {
   margin-bottom: 2rem;
   color: #fff;
   margin-top: 4rem;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
 }
 
 .hero p {
   font-size: 1.3rem;
   margin: 1.5rem 0 20px;
   line-height: 1.6;
+
+  animation-name: moveInRight;
+  animation-duration: 1s;
 }
 
 /* Project-Cards Grid*/
@@ -146,6 +198,9 @@ nav a.active {
 .segment {
   margin-top: 65px;
   margin-bottom: 20px;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
 }
 
 .segment h2 {
@@ -191,6 +246,9 @@ nav a.active {
 .segment-small {
   margin-top: 20px;
   margin-bottom: 20px;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
 }
 
 .segment-small p,
@@ -220,6 +278,9 @@ footer {
   left: 0;
   width: 100%;
   padding-top: 5rem;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
 }
 
 footer span,
